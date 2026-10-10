@@ -34,6 +34,7 @@ workflows:
           curl -L --fail -o templates.tpz "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
           unzip -q templates.tpz -d templates_unpacked
           cp -R templates_unpacked/templates/* "$TEMPLATES_DIR/"
+          rm -rf templates_unpacked templates.tpz
       - name: Configure online endpoint and microphone permission
         script: |
           set -euxo pipefail
