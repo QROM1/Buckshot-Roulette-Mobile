@@ -6,7 +6,6 @@ workflows:
     triggering:
       events:
         - push
-        - manual
       branch_patterns:
         - pattern: online-unsigned-build
           include: true
